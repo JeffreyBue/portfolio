@@ -1,0 +1,9 @@
+<?
+	if( meta.scripts ) {
+		meta.scripts.forEach(function(e){
+?>
+			<script src="/javascripts/<?=e;?>.js" type="text/javascript"></script>
+<?
+		});
+	};
+?>

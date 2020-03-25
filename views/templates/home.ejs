@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<?- include(`${views_root}/build/head`) ?>
+</head>
+<body id="<?- meta.slug ?>">
+	<? if(meta.nav) { ?>
+		<?//- include(`${views_root}/build/nav`) ?>
+	<? }; ?>
+	<div id="home">
+		<?- include(`${views_root}/pages/${meta.slug}.ejs`); ?>
+	</div>
+	<?- include(`${views_root}/build/footer`) ?>
+	<?- include(`${views_root}/build/foot`) ?>
+</body>
+</html>

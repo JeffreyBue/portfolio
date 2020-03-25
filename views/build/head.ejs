@@ -1,0 +1,35 @@
+<title>
+	<?=meta.title;?>
+</title>
+<meta name="description" content="<?=meta.description;?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Custom CSS -->
+<link href="/stylesheets/main.css" rel='stylesheet' type='text/css' />
+<link href="/stylesheets/nav.css" rel='stylesheet' type='text/css' />
+
+<!-- Font-Awesome Icons -->
+<script src="https://use.fontawesome.com/e979635f99.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!-- jQuery -->
+<script src="/javascripts/lib/jquery-3.3.1.min.js"></script>
+
+<!--Page Styles-->
+<?
+	if( meta.styles ) {
+		meta.styles.forEach(function(e){
+?>
+<link href="/stylesheets/<?=e;?>.css" rel="stylesheet"><?
+		});
+	};
+?>
+
+<!-- isMobile -->
+<script>
+	var isMobile = <?= isMobile ? 'true' : 'false'; ?>;
+</script>

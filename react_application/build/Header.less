@@ -1,0 +1,32 @@
+@import '~stylesheets/less/reference/variables.less';
+
+header {
+	padding: 1em 0;
+	border-bottom: 2px solid #f0f0f0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: @white;
+
+	h1 {
+		display: inline-block;
+		margin: 0;
+	}
+
+	ul {
+		float: right;
+
+		li {
+			display: inline-block;
+			padding: 0 0.5em;
+			line-height: 50px;
+			text-transform: uppercase;
+			font-family: @heading;
+
+			a {
+				color: @gray;
+			}
+		}
+	}
+}

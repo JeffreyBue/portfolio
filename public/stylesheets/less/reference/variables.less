@@ -1,0 +1,226 @@
+//
+// Theme: Deboot
+// Theme Variables - used by mixins.less and section less files
+// This should NOT compile into CSS
+// --------------------------------------------------
+
+@font-face {
+  font-family: MontserratLight;
+  src: url('/fonts/Montserrat-Light.ttf');
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: MontserratLightItalic;
+  src: url('/fonts/Montserrat-LightItalic.ttf');
+  font-style: italic;
+  font-weight: lighter
+}
+@font-face {
+  font-family: Montserrat;
+  src: url('/fonts/Montserrat-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: MontserratItalic;
+  src: url('/fonts/Montserrat-MediumItalic.ttf');
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: MontserratBold;
+  src: url('/fonts/Montserrat-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: MontserratBoldItalic;
+  src: url('/fonts/Montserrat-BoldItalic.ttf');
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: MontserratBlack;
+  src: url('/fonts/Montserrat-Black.ttf');
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: MontserratBlackItalic;
+  src: url('/fonts/Montserrat-BlackItalic.ttf');
+  font-style: italic;
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url('/fonts/RobotoMono-Light.ttf');
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: RobotoLightItalic;
+  src: url('/fonts/RobotoMono-LightItalic.ttf');
+  font-style: italic;
+  font-weight: lighter;
+}
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/RobotoMono-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: RobotoItalic;
+  src: url('/fonts/RobotoMono-MediumItalic.ttf');
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url('/fonts/RobotoMono-bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: RobotoBoldItalic;
+  src: url('/fonts/RobotoMono-boldItalic.ttf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Garamond;
+  src: url('/fonts/EBGaramond-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: GaramondItalic;
+  src: url('/fonts/EBGaramond-Italic.ttf');
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: GaramondBold;
+  src: url('/fonts/EBGaramond-SemiBold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: GaramondBoldItalic;
+  src: url('/fonts/EBGaramond-SemiBoldItalic.ttf');
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: GaramondBolder;
+  src: url('/fonts/EBGaramond-ExtraBold.ttf');
+  font-style: normal;
+  font-weight: bolder;
+}
+@font-face {
+  font-family: GaramondBolderItalic;
+  src: url('/fonts/EBGaramond-ExtraBoldItalic.ttf');
+  font-style: italic;
+  font-weight: bolder;
+}
+
+// Window widths - desktop first design
+@widthTablet: 1200px;
+@widthMobile: 600px;
+
+// Brand colors
+@green : #006837;
+@light-green: lighten(@green, 10%);
+@lighter-green: lighten(@green, 20%);
+@dark-green: darken(@green, 10%);
+@darker-green: darken(@green, 20%);
+@blue : #0a3d71;
+@light-blue : #66ceff;
+@lighter-blue : lighten(@blue, 20%);
+@dark-blue : darken(@blue, 10%);
+@darker-blue : darken(@blue, 20%);
+@black : #000; // Use this to control the perceived black on the page
+@gray : #989898;
+@grey : @gray; // So I don't go insane trying to remember how I spelled "gray"
+@dark-gray: darken(@gray, 20%);
+@dark-grey: @dark-gray;
+@light-gray: lighten(@gray, 20%);
+@light-grey: @light-gray;
+@white : #fff; // Use this to control the perceived white on the page
+@yellow : #ffff00;
+@orange : #f39c12;
+@light-orange : lighten(@orange, 10%);
+@gold : #ffd118;
+@light-gold : #ffe37b;
+@brown : #665200;
+@red : #450202;
+@light-red : #4b0000;
+
+@primary: @blue; 
+@secondary: @light-blue;
+@progress : saturate(lighten(@green, 10%), 10%); // Keeps the progress bars all the same color
+@faded-background: rgba(69, 2, 2, 0.9);
+@dark-teal: #0f778e;
+@light-teal: #01c4ff;
+@teal: #099db5;
+
+// Text Color
+@text : #3e3e3e;
+
+// Links
+@link: @primary;
+@link-hover: darken(@link, 15%);
+@link-active: lighten(@link, 15%);
+
+// Border and Highlight Color
+@border-color: #E5E5E5;
+@highlight: #57bf93;
+
+@bodyLight : RobotoLight, Arial, sans-serif;
+@bodyLightItalic : RobotoLightItalic, Arial, sans-serif;
+@body : Roboto, Arial, sans-serif;
+@bodyItalic : RobotoItalic, Arial, sans-serif;
+@bodyBold : RobotoBold, Arial, sans-serif;
+@bodyBoldItalic : RobotoBoldItalic, Arial, sans-serif;
+
+@altLight : MontserratLight, Arial, sans-serif;
+@altLightItalic : MontserratLightItalic, Arial, sans-serif;
+@alt : Montserrat, Arial, sans-serif;
+@altItalic : MontserratItalic, Arial, sans-serif;
+@altBold : MontserratBold, Arial, sans-serif;
+@altBoldItalic : MontserratBoldItalic, Arial, sans-serif;
+@altBolder : MontserratBlack, Arial, sans-serif;
+@altBolderItalic : MontserratBlackItalic, Arial, sans-serif;
+
+@heading : Garamond, 'Times New Roman', serif;
+@headingItalic : GaramondItalic, 'Times New Roman', serif;
+@headingBold : GaramondBold, 'Times New Roman', serif;
+@headingBoldItalic : GaramondBoldItalic, 'Times New Roman', serif;
+@headingBolder : GaramondBolder, 'Times New Roman', serif;
+@headingBolderItalic : GaramondBolderItalic, 'Times New Roman', serif;
+
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.dropshadow() {
+	box-shadow: 1px 1px 1px grey;
+}
+
+.dropshadowinset() {
+	box-shadow: inset 1px 1px 1px grey;
+}

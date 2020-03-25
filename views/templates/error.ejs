@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<?- include(`${views_root}/build/head`) ?>
+</head>
+<body id="<?=meta.slug;?>">
+	<?//- include(`${views_root}/build/nav`) ?>
+	<section>
+		<div class="wrapper">
+			<p>You shouldn't be here, call Jeff and let him know the address above is not working ^^^</p>
+			<h1><?= meta.error.status ?> <?= meta.message; ?></h1>
+			<? if(enviroment == 'development'){ ?>
+				<pre><?= meta.error.stack ?></pre>
+			<? } ?>
+		</div>
+	</section>
+	<?- include(`${views_root}/build/footer`) ?>
+	<?- include(`${views_root}/build/foot`) ?>
+</body>
+</html>
