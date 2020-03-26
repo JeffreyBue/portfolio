@@ -1,0 +1,44 @@
+@import '~stylesheets/less/reference/variables.less';
+
+#hero-webography {
+	min-height: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		color: @white;
+		text-shadow: 1px 1px 1px @black;
+		letter-spacing: 0.2em;
+		margin-bottom: 0;
+	}
+
+	@keyframes tickerv {
+		0% {margin-top: 0;}
+		33% {margin-top: -65px;}
+		66% {margin-top: -130px;}
+		100% {margin-top: 0;}
+	}
+
+	.buttons {
+		padding: 1em;
+		text-align: center;
+		margin-top: 1em;
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 1em;
+		margin: 1em auto 0;
+		width: 30%;
+
+		a {
+			margin-left: 2em;
+			font-family: @heading;
+			text-transform: uppercase;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+	}
+}

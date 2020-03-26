@@ -1,0 +1,52 @@
+@import '~stylesheets/less/reference/variables.less';
+
+footer {
+	padding: 1em 0;
+	background: @black;
+	color: @white;
+
+	.contact {
+		display: flex;
+		margin: 3.5em 0;
+
+		li {
+			font-family: @heading;
+			text-align: center;
+			flex-grow: 1;
+			font-size: 12pt;
+			line-height: 20px;
+			color: @gray;
+			
+			&:hover {
+				color: @white;
+			}
+		}
+	}
+
+	.contact-form {
+		display: none;
+	}
+
+	.social-links {
+		display: flex;
+		width: 50%;
+		margin: 0 auto 1em;
+
+		li {
+			text-align: center;
+			flex-grow: 1;
+			font-size: 26pt;
+			
+			a:hover {
+				color: @white;
+			}
+		}
+	
+	}
+
+	.copy {
+		border-top: 1px solid @white;
+		padding: 1em 0 0;
+		font-family: @alt;
+	}
+}
