@@ -14,6 +14,7 @@ import Webography from 'pages/Webography';
 import Videography from 'pages/Videography';
 import Photography from 'pages/Photography';
 import Contact from 'pages/Contact';
+import Resume from 'components/Resume';
 import ToTop from 'components/ToTop';
 
 import { getPieces } from './rootDuck';
@@ -40,8 +41,6 @@ class App extends Component {
 	}
 
 	componentDidMount(){
-		console.log('shit');
-
     	window.addEventListener('scroll', this.handleScroll);
 	}
 	
@@ -77,7 +76,6 @@ class App extends Component {
 			openNav,
 			scrollEnough
 		} = this.state;
-		console.log('fuck');
 
 		return <Router>
 			<div>
@@ -89,11 +87,11 @@ class App extends Component {
 					<Route exact path="/photography/" render={Photography} />
 					<Route exact path="/contact/" component={Contact} />
 					<Route render={(match) => {
-						console.log(match);
 						return <div>OOOppps</div>;
 					}} />
 				</Switch>
 				<Footer />
+				<Resume />
 				<ToTop scrollEnough={scrollEnough} />
 			</div>
 		</Router>;

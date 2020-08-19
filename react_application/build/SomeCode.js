@@ -32,7 +32,7 @@ const SomeCode = () => <section id="some-code">
 				I'm going to run down the setup custom build for this specific website; jeffreybue.com. So below you'll see what helped me achieve a more dynamic, reactful website.
 			</p>
 			<p>
-				I'm not going to show everything, but just some main custom stuff, if there's any feedback you'd like to share from bad or good, please let me know I would like to here about it!
+				Keep in mind I'm not going to show everything, there's actually quite a bit more then below. This is just some main custom stuff, if there's any feedback you'd like to share bad or good, please let me know I would like to here about it!
 			</p>
 			<span className="spacer"></span>
 		</div>
