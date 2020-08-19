@@ -1,4 +1,4 @@
-// import './About.less';
+import './About.less';
 
 import React from 'react';
 
@@ -12,7 +12,7 @@ const About = () => <section id="about">
 	        I also love photography and videography.
 	    </p>
 	    <p>
-	        Please contact me and I’ll get back to you as soon as possible.
+	        Please <a href="/contact/">contact</a> me and I’ll get back to you as soon as possible.
 	    </p>
 	 </div>
 </section>;

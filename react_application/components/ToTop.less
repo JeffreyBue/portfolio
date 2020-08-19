@@ -1,0 +1,39 @@
+@import '~stylesheets/less/reference/variables.less';
+
+#toTop {
+	position: fixed;
+	background: @green;
+	border-radius: 100%;
+	height: 8em;
+	width: 8em;
+	bottom: 1em;
+	right: 1em;
+	opacity: 0;
+	font-size: 15px;
+	color: @white;
+	word-spacing: 0.5em;
+	cursor: pointer;
+	text-shadow: 1px 1px @black;
+	transition: 500ms opacity ease;
+	z-index: -999;
+
+	svg {
+		position: absolute;
+	    top: 35px;
+	    font-size: 4em;
+	    left: 30px;
+	}
+
+	&.show {
+		z-index: 9;
+		opacity: .5;
+
+		@media(max-width: @widthMobile) {
+			opacity: .9;
+		}
+
+		&:hover {
+			opacity: .9;
+		}	
+	}
+}

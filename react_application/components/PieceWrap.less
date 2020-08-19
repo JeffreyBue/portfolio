@@ -1,0 +1,72 @@
+@import '~stylesheets/less/reference/variables.less';
+
+#portfolio {
+	span.loading {
+		display: block;
+		width: 6em;
+		height: 3em;
+		background: url(/images/loading.gif) center no-repeat;
+		background-size: 100%;
+		margin: 0 auto;
+	}
+
+	.piece-wrap {
+		max-height: 0;
+		transition: max-height 1s ease;
+		overflow: hidden;
+		background: url(/images/pattern1.png) center;
+
+		&.active {
+			max-height: 100em;
+			transition: max-height 2s ease;
+		}
+
+		&.loading {
+			max-height: 4em;
+		}
+
+		&.close {
+			max-height: 0;
+		}
+
+		.piece {
+			.piece-individual {
+
+				.piece-content {
+					margin-top: 3em;	
+
+					p.button {
+						text-align: center;
+					}			
+				}
+
+				.content {
+					width: 75%;
+					margin: 1em auto;
+				}
+			}
+
+			.close-piece {
+				margin-top: 1em;
+				text-align: center;
+				
+				span {
+					width: 75%;
+					margin-bottom: 1em;
+					border-bottom-width: 1px;
+				}
+
+				button {
+					border-radius: 100%;
+					color: @blue;
+					border-color: @blue;
+					box-shadow: none;
+
+					@media(max-width: @widthMobile) {
+						width: initial;
+					}
+				}
+			}
+		}
+	}
+}

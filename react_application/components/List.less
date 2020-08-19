@@ -1,0 +1,53 @@
+@import '~stylesheets/less/reference/variables.less';
+
+#projects {
+	display: flex;
+	flex-wrap: wrap;
+
+	li {
+		opacity: .85;
+		cursor: pointer;
+		width: 25%;
+		cursor: pointer;
+		background: @black;
+		margin-bottom: 0;
+
+		img {
+			width: 100%;
+			height: 200px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+		
+		h3 {
+			color: @white;
+			font-size: 12pt;
+			text-align: center;
+			padding: 1.5em 0;
+			text-transform: uppercase;
+			margin-bottom: 0;
+
+			span {
+				font-size: 9pt;
+				text-transform: lowercase;
+				font-family: @headingItalic;
+			}
+		}
+	}
+
+	@media(max-width: @widthTablet) {
+		li {
+			width: 50%;
+		}
+	}
+
+	@media(max-width: @widthMobile) {
+		flex-direction: column;
+
+		li {
+			width: 100%;
+		}
+	}
+}

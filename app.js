@@ -56,6 +56,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/portfolio/', express.static(path.join(__dirname, 'react_application', 'portfolio')));
 
 // view engine setup
 ejs.delimiter = "?";
@@ -77,8 +78,10 @@ app.use((req, res, next) => {
 //---------------------------------------------------------
 
 // connect to db
-import dbConnect from './db/connection';
-app.use(dbConnect);
+/* disable DB no need
+	import dbConnect from './db/connection';
+	app.use(dbConnect);
+*/
 
 //---------------------------------------------------------
 
@@ -101,10 +104,10 @@ app.use(session({
 
 // Routes:
 import pages from './routes/pages';
-// import api from './routes/api';
+import api from './routes/api';
 
+app.use('/api/', api);
 app.use('/', pages);
-// app.use('/api/', api);
 //---------------------------------------------------------
 
 // catch 404 and forward to error handler

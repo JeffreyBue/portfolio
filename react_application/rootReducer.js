@@ -2,8 +2,9 @@
  * Top-level Application reducer
  */
 import { combineReducers } from 'redux';
-// import { default as rsvp } from './rsvpDuck';
+import { piecesRed as pieces, imagesRed as images } from './rootDuck';
 
 export default combineReducers({
-	// rsvp
+	pieces,
+	images
 });

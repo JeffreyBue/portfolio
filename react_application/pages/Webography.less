@@ -41,4 +41,63 @@
 			}
 		}
 	}
+	
+	@media(max-width: @widthTablet) {
+		min-height: initial;
+		
+		h1 {
+			font-size: 2em;
+		}
+
+		.centerV {
+			padding-top: 100px;
+
+			.buttons {
+				width: initial;
+
+				a.btn {
+					width: initial;
+				}
+
+				a {
+					display: block;
+					margin: 0;
+
+					&:first-child {
+						margin: 0 0 1em;
+					}
+				}
+			}
+		}
+	}
+}
+
+#websites {
+	padding-bottom: 0;
+
+	h2 {
+		text-align: center;
+		margin: 0.5em 0;
+		
+		~ p {
+			width: 75%;
+			margin: 1em auto 0;
+			text-align: center;
+		}
+
+		~ span {
+			font-style: italic;
+			font-size: 12pt;
+			display: block;
+			text-align: center;
+		}
+	}
+	
+	@media(max-width: @widthTablet) {
+		padding: 0 10px;
+		
+		h2 ~ p {
+			width: initial;
+		}
+	}
 }

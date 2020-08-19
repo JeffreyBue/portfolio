@@ -8,10 +8,18 @@ import * as g from '../config/globals';
 
 /* GET All ROUTEs. */
 router.get('/*', (req, res, next) => {
+	let pieces = [];
+	try {
+		pieces = fs.readdirSync(`${g.app_root}/react_application/portfolio/`).filter(file => /^[A-Za-z]+$/.test(file));
+	}catch(e){
+		console.error(e);
+	} 
+
 	res.render(
 		g.home.template, 
 		{ 
-			meta: g.home
+			meta: g.home,
+			pieces
 		}
 	);
 });

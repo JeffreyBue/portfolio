@@ -21,12 +21,12 @@ const Hero = () => <Parallax
 					</ul>
 			 	</div>
 			 	<div className="buttons">
-			 		<Scroll to="#my-work">
+			 		<Scroll to="#work" offset="-94">
 				 		<a className="btn" >
 					 			My Work
 					 	</a>
 					</Scroll>
-			 		<Scroll to="#about" offset="-100px">
+			 		<Scroll to="#about" offset="-94">
 				 		<a>
 							About Me&nbsp;&nbsp;<i className="fas fa-arrow-circle-right"></i>
 				 		</a>

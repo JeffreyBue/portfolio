@@ -11,10 +11,11 @@ export default class Scroll extends Component {
 		} = this.props;
 
 		// GET VALUE OF OFFSET + OR - PX OR NOT
-
+		// isNegitive = offset.substr(0, 1) == '-';
+		
 		if($(to).length) {
 			$('html, body').animate({
-	        	scrollTop: $(to).offset().top + 200
+	        	scrollTop: $(to).offset().top + parseInt(offset)
 	      	}, 700);
 		}else {
 			return false;

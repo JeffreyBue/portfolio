@@ -14,7 +14,6 @@
 	}
 
 	.ticker {
-	    // background: #eee;
 	    box-sizing: content-box;
 	    height: 50px;
 	    overflow: hidden;
@@ -61,6 +60,51 @@
 
 			&:first-child {
 				margin: 0;
+			}
+		}
+	}
+
+	@media(max-width: @widthTablet) {
+		min-height: initial;
+
+		@keyframes tickerx {
+			0% {margin-top: 0;}
+			33% {margin-top: -45px;}
+			66% {margin-top: -85px;}
+			100% {margin-top: 0;}
+		}
+
+		.centerV {
+			padding-top: 100px;
+			
+			.ticker {
+				height: 30px;
+			    animation-name: tickerx;
+
+				ul {
+					animation-name: tickerx;
+
+					li {
+						font-size: 30px;
+					}
+				}
+			}
+
+			.buttons {
+				width: initial;
+
+				a.btn {
+					width: initial;
+				}
+
+				a {
+					display: block;
+					margin: 0;
+
+					&:first-child {
+						margin: 0 0 1em;
+					}
+				}
 			}
 		}
 	}

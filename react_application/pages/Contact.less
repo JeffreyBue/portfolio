@@ -1,0 +1,138 @@
+@import '~stylesheets/less/reference/variables.less';
+
+#hero-contact {
+	min-height: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		color: @white;
+		text-shadow: 1px 1px 1px @black;
+		letter-spacing: 0.2em;
+		margin-bottom: 0;
+	}
+
+	@media(max-width: @widthTablet) {
+		min-height: 200px;
+
+		.centerV {
+			padding-top: 100px;
+
+			h1 {
+				font-size: 1.8em;
+			}
+		}
+	}
+}
+
+#contact_me {
+	padding: 0 10%;
+
+	h2 {
+		text-align: center;
+		margin: 0.5em 0;
+		
+		~ p {
+			width: 75%;
+			margin: 1em auto 0;
+			text-align: center;
+		}
+
+		~ span {
+			font-style: italic;
+			font-size: 12pt;
+			display: block;
+			text-align: center;
+		}
+	}
+
+	section {
+		transition: 0.5s max-height ease-out;
+		max-height: 400px;
+		overflow: hidden;
+
+		&.loading {
+			max-height: 0;
+			padding: 0;
+		}
+
+		&.sent {
+			max-height: 200px;
+			padding: 1em 0;
+
+			p {
+				background: lighten(@green, 10%);
+				color: #fff;
+				padding: 10px;
+				border-radius: 10px;
+				text-transform: none;
+				text-align: center;
+				border: 1px solid yellow;			
+			}
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+			
+			&.alert {
+				position: relative;
+
+				&:before {
+					content: 'Please Write A Note';
+					position: absolute;
+					background: @red;
+					color: @white;
+					padding: 5px 15px;
+					text-align: center;
+					display: inline-block;
+					right: 0;
+					bottom: 13px;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					border: 10px solid transparent;
+					border-top-color: @red;
+					right: 60px;
+					bottom: -7px;
+				};
+			}
+		}
+
+		textarea {
+			width: 100%;
+			border: 1px dotted @blue;
+			height: 200px;
+			margin-bottom: 1em;
+			box-sizing: border-box;
+
+			&.alert {
+				background: pink;
+			}
+		}
+
+		button {
+			width: 100%;
+			background-color: @blue;
+			color: @white;
+
+			&:hover {
+				color: @white;
+			}
+		}
+	}
+	
+	@media(max-width: @widthTablet) {
+		padding: 0 10px;
+		
+		h2 ~ p {
+			width: initial;
+		}
+	}
+}

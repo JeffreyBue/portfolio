@@ -1,10 +1,10 @@
 export const home = {
 	title: 'Jeffrey Bue\'s Portfolio Site',
-	description: 'Coding Coding Coding!',
+	description: 'Coding Cushing Code!',
 	slug: 'home',
 	id: '/',
 	nav: true,
 	template: 'react',
 	styles: [],
-	scripts: ['bundle']
+	scripts: ['lib/circletype', 'bundle']
 };
